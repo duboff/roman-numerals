@@ -71,5 +71,14 @@ describe 'roman_number' do
     it '99 into XCIX' do
       expect(roman_number(99)).to eq 'XCIX'
     end
+    it '799 into DCCXCIX' do
+      expect(roman_number(799)).to eq 'DCCXCIX'
+    end
+    it '999 into CMXCIX' do
+      expect(roman_number(999)).to eq 'CMXCIX'
+    end
+    it '3999 into MMMCMXCIX' do
+      expect(roman_number(3999)).to eq 'MMMCMXCIX'
+    end
   end
 end
