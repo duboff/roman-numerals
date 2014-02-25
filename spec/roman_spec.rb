@@ -30,6 +30,13 @@ describe 'roman' do
   end
 end
 
+describe 'get_digits' do
+  it 'should return [9, 3, 5, 1] for 1359' do
+    expect(get_digits(1359)).to eq [9, 5, 3, 1]
+  end
+end
+
+
 describe 'roman_number' do
   context 'should convert ' do
     it '3 into III' do
@@ -44,7 +51,7 @@ describe 'roman_number' do
     it '9 into IX' do
       expect(roman_number(9)).to eq 'IX'
     end
-    it '13 into XVII' do
+    it '13 into XIII' do
       expect(roman_number(13)).to eq 'XIII'
     end
     it '14 into XIV' do
