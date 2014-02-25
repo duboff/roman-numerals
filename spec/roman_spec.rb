@@ -1,42 +1,5 @@
 require 'roman'
 
-describe 'roman' do
-  it 'should convert 1 into I' do
-    expect(roman_dict(1)).to eq 'I'
-  end
-
-  it 'should convert 5 into V' do
-    expect(roman_dict(5)).to eq 'V'
-  end
-
-    it 'should convert 10 into X' do
-    expect(roman_dict(10)).to eq 'X'
-  end
-
-    it 'should convert 5 into L' do
-    expect(roman_dict(50)).to eq 'L'
-  end
-
-    it 'should convert 100 into C' do
-    expect(roman_dict(100)).to eq 'C'
-  end
-
-    it 'should convert 500 into D' do
-    expect(roman_dict(500)).to eq 'D'
-  end
-
-    it 'should convert 1000 into M' do
-    expect(roman_dict(1000)).to eq 'M'
-  end
-end
-
-describe 'get_digits' do
-  it 'should return [9, 3, 5, 1] for 1359' do
-    expect(get_digits(1359)).to eq [9, 5, 3, 1]
-  end
-end
-
-
 describe 'roman_number' do
   context 'should convert ' do
     it '3 into III' do
