@@ -66,13 +66,13 @@ describe 'roman_number' do
     it '53 into LIII' do
       expect(roman_number(53)).to eq 'LIII'
     end
-    it '54 into XIV' do
+    it '54 into LIV' do
       expect(roman_number(54)).to eq 'LIV'
     end
     it '67 into LXVII' do
       expect(roman_number(67)).to eq 'LXVII'
     end
-    it '79 into XXIX' do
+    it '79 into LXXIX' do
       expect(roman_number(79)).to eq 'LXXIX'
     end
     it '99 into XCIX' do

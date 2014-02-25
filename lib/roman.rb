@@ -14,7 +14,6 @@ end
 def rom_x_to_y(num, x, y, k)
   result = ''
   result = roman_dict(x) * num.modulo(y).div(x) unless num.modulo(y) >= k
-  result
 end
 
 def special_case(num, result)
@@ -29,15 +28,15 @@ def special_case(num, result)
 end
 
 def roman_number(num)
-  rom_1_to_5 = rom_x_to_y(num, 1, 5, 4) # when last digit is zero to 3
-  rom_5_to_10 = rom_x_to_y(num, 5, 10, 9)
-  rom_10_to_50 = rom_x_to_y(num, 10, 50, 40)
-  rom_50_to_100 = rom_x_to_y(num, 50, 100, 90)
-  rom_100_to_500 = rom_x_to_y(num, 100, 500, 400)
-  rom_500_to_1000 = rom_x_to_y(num, 500, 1000, 900)
-  rom_1000_onwards = rom_x_to_y(num, 1000, 5000, 4000)
-  
-  result = [rom_1_to_5, rom_5_to_10, rom_10_to_50, rom_50_to_100, rom_100_to_500, rom_500_to_1000, rom_1000_onwards]
+  borders = [[1,5,4],
+              [5,10,9],
+              [10,50,40],
+              [50,100,90],
+              [100,500,400],
+              [500, 1000, 900],
+              [1000, 5000, 4000]]
+
+  result = borders.map {|border| rom_x_to_y(num, border[0], border[1], border[2])}
 
   result = special_case(num, result)
   
